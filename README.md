@@ -38,6 +38,18 @@ To run Backlog on your system, you need to have the following installed:
    uv run fastapi dev
    ```
 
+## Quality Checks
+
+Run these checks locally before pushing:
+
+| Check | Command |
+| --- | --- |
+| Lint | `uv run ruff check` |
+| Format check | `uv run ruff format --check` |
+| Format fix | `uv run ruff format` |
+| Type check | `uv run mypy .` |
+| Test | `uv run pytest` |
+
 ## License
 
 Backlog is licensed under the [MIT License](LICENSE).
