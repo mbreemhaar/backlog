@@ -10,6 +10,6 @@ app = FastAPI(
 
 
 @app.get("/health", tags=["health"])
-def health_check():
+def health_check() -> dict[str, str]:
     """Returns the health status of the API."""
     return {"status": "ok"}
