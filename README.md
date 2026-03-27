@@ -16,6 +16,7 @@ To run Backlog on your system, you need to have the following installed:
 
 - [Python 3.13+](https://www.python.org/downloads/)
 - [uv](https://docs.astral.sh/uv/)
+- [Docker](https://www.docker.com/) (for running PostgreSQL)
 
 ### Development Setup
 
@@ -33,7 +34,15 @@ To run Backlog on your system, you need to have the following installed:
    ```sh
    uv sync
    ```
-3. Run the application:
+3. Copy the example environment file and adjust as needed:
+   ```sh
+   cp .env.example .env
+   ```
+4. Start the PostgreSQL database:
+   ```sh
+   docker compose up -d
+   ```
+5. Run the application:
    ```sh
    uv run fastapi dev
    ```
